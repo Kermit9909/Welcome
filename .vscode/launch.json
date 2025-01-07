@@ -4,7 +4,6 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
             "name": "Launch Edge",
             "request": "launch",
@@ -24,6 +23,12 @@
             "request": "launch",
             "name": "Open index.html",
             "file": "/workspaces/Welcome/index.html"
+        },
+        {
+            "type": "chrome",
+            "name": "http://127.0.0.1:3000/index.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/index.html"
         }
     ]
 }
