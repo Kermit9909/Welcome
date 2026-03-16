@@ -9,7 +9,7 @@
     - Identify missing security controls and gap analysis
     - Recognize the intrusion attempts and understand the APT's goals and objectives
 
-### Learning Objectives ( Attack Phases)
+### Learning Objectives (Attack Phases)
     - Recon
     - Weaponization
     - Delivery
@@ -35,7 +35,8 @@ OSINT - Yes!
 
 ## Weaponization
 
-Def: Turning raw information into actionable attack tools through crafting malware and exploits into a payload.
+### Def: Turning raw information into actionable attack tools through crafting malware and exploits into a payload.
+
 ***Key Terminology***
 **Malware**
 **Exploits**
@@ -49,7 +50,7 @@ Def: Turning raw information into actionable attack tools through crafting malwa
      - tailored phishing attempts
      - Watering hole attacks (compromise frequently visited sites of target/s)
 
-## :warning:Exploitation
+## :warning: Exploitation
 ### Techniques
     - Malicious macro execution via phishing email that executes when user opens .xml file for example
     - Zero-day exploit
@@ -77,12 +78,13 @@ Def: Turning raw information into actionable attack tools through crafting malwa
         - HKEY-LM\....\....\RunOnce (Run once)
 
 ### Timestomping  (Check out on MITRE)
-    - Powershell is Powerfull!!! :muscle:
+:muscle: - Powershell is Powerfull!!! 
 
 ## Command & Control (C&C | C2 Beaconing)
 
 **Most common C2 channels**
     - HTTP/HTTPS, DNS
+
 **New Modern / Evolved chanenls**
     - HTTPS C2 - encrypted and looks normal. Most modern malware uses this.
     - DNS Tunneling - encoded data in DNS queries (slow but effective)
@@ -92,7 +94,7 @@ Def: Turning raw information into actionable attack tools through crafting malwa
     - ICMP tunneling - hiding data in ping packets
     - Socail Media APIs - Twitter/X, Telegram used as C2 (fascinating)
 
-### Question: "I know this is HTTP, BUT does this HTTP ***BEHAVE normally"
+### Question: "I know this is HTTP, BUT does this HTTP ***BEHAVE*** normally"
 
 ## Actions on Objectives (Exfiltration)
     - Collect credentials from users
@@ -102,29 +104,6 @@ Def: Turning raw information into actionable attack tools through crafting malwa
     - Collect and exfiltrate sensitive data
     - Del backups and shadow copies (VSS)
     - Overwrite or corrupt data
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Tools Used
 
@@ -137,14 +116,19 @@ Def: Turning raw information into actionable attack tools through crafting malwa
 
 
 ## Commands / Syntax
-
-
-
+N/A
 
 ## IOCs / Reference
-Lockheed Martin - Cyber Kill Chain (registered 2011)
-
-
-
+    - Hashes
+    - IP
+    - Domain
+    - URL
+    - Email
+    - Registry
+    - File Path
+    - Process (or process tree)
+    - Lockheed Martin - Cyber Kill Chain (registered 2011)
 
 ## Takeaways
+
+Understanding the cyber kill chain gives an outline of the necessary requiremnts and techniques in order of a proper cyber attack.  Therefore, it gives a good baseline of where to look for IOCs to better catch alerts as early as possible.  It also relates to the pyramid of pain because if you can catch a suspicious hash it is much easier to stop a potential attack before it gets to a attackers TTPs.
