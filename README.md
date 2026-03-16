@@ -3,21 +3,98 @@
 ![Kermit the Frog with a black hoodie in ASCII art](https://github.com/user-attachments/assets/5e90b07c-26d2-48b7-a71f-a4a7f678092a)
 
 
+# Hey, I'm Sean (aka Kermit9909) 👋
 
+![Kermit](./kermit.png)
 
-# Welcome!!
-**Personal Website | Resume | Skills | Interest**
+> *"The journey of a thousand miles begins with a single step."*  
+> Currently on mile 47 — and documenting every one of them.
 
-*This is a place I have created to show future employers my interests, hobbies, and a little coding skill.  I am currently working on my Security + certification.  I do like coding and this is also a showcase of what html, css, and java script skills I have.  My goal is to have a functioning website by February 2025.*  
+---
 
-**Topics:**
+## 🧭 Who I Am
 
-    - IT networking and security concepts
-    - OSINT information and techniques
-    - Current tech news
-    - Videos to help people "newer" than myself
-    - Just keep on learning and have fun
+I'm a self-taught IT and cybersecurity professional in the middle of a deliberate career
+transition. I hold CompTIA A+, Security+, and CCNA certifications, and I'm actively
+building toward SOC Tier 1, NOC Tier 1, and IT Helpdesk roles.
 
+This GitHub is two things at once: a **professional portfolio** and a **living notebook**.
+You'll find homelab projects, study notes, tool experiments, and the occasional deep dive
+into something that just caught my attention.
+
+Portfolio site: [seanelggren.com](https://seanelggren.com)
+
+---
+
+## 🎓 Certifications
+
+| Cert | Issuer | Status |
+|------|--------|--------|
+| CompTIA A+ | CompTIA | ✅ Earned |
+| CompTIA Security+ | CompTIA | ✅ Earned |
+| Cisco CCNA | Cisco | ✅ Earned |
+| CompTIA CySA+ | CompTIA | 🔄 Next target |
+
+---
+
+## 🏗️ Active Projects & Portfolio
+
+| Project | Description | Track |
+|---------|-------------|-------|
+| [Homelab Infrastructure](./homelab/) | Windows Server 2019 DC, pfSense, Kali, Ubuntu on VirtualBox | Sysadmin / SOC |
+| [osTicket Help Desk Lab](./osticket/) | Full WIMP stack deployment with live ticket workflow demos | IT Helpdesk |
+| [SOC Alert Triage Lab](./soc/) | Splunk SPL practice, phishing analysis, MITRE ATT&CK mapping | SOC Analyst |
+| [Network Lab](./networking/) | Packet Tracer CCNA demos, Wireshark troubleshooting, Ansible | NOC / Networking |
+
+---
+
+## 📚 Learning Journal
+
+This is where I keep running notes, references, and experiments.
+Think of it as a public Obsidian vault.
+
+- **PowerShell** — scripting from a sysadmin + SOC lens
+- **Python** — automation, tooling, and whatever grabs my interest
+- **TryHackMe** — SOC Level 1 path and beyond
+- **Let's Defend** — blue team incident response practice
+- **Tools I'm Playing With** — whatever I find interesting on GitHub
+
+> *I document as I learn. Notes here are honest — they reflect where I actually am,
+> not where I want to appear to be.*
+
+---
+
+## 🧰 Tech Stack & Tools
+
+**Operating Systems:** Kali Linux · Windows Server 2019 · Ubuntu Server · Windows 11  
+**Networking:** pfSense · Cisco IOS · Wireshark · Packet Tracer  
+**Security:** Splunk · Metasploit · Wazuh · MITRE ATT&CK  
+**Scripting:** PowerShell · Python · Bash  
+**Sysadmin:** Active Directory · GPO · IIS · osTicket · Ansible  
+**Other:** Git · VirtualBox · Obsidian · Anki
+
+---
+
+## 📖 Outside the Terminal
+
+I'm a practicing Catholic with a serious interest in theology, philosophy of science,
+mathematics, and physics. I find that the same habits that make someone good at
+learning technical skills — patience, curiosity, intellectual honesty — apply just as
+well to the rest of life.
+
+Martial arts philosophy also finds its way into how I think about problem-solving.
+
+---
+
+## 📬 Connect
+
+- 🌐 [seanelggren.com](https://seanelggren.com)
+- 💼 [LinkedIn](#) *(add your link)*
+- 📧 *(optional — your call)*
+
+---
+
+*This repo is always a work in progress. That's the point.*
 
 
 
