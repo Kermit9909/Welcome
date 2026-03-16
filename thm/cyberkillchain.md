@@ -66,7 +66,7 @@ OSINT - Yes!
 
 ### Backdoor AKA Access Point
 
-**Persistence can be achieved through:
+**Persistence can be achieved through:**
 
     - Installing a ***web shell*** on a server
     - Installing a backdoor on machine via ***Meterpreter** for example
@@ -78,7 +78,7 @@ OSINT - Yes!
         - HKEY-LM\....\....\RunOnce (Run once)
 
 ### Timestomping  (Check out on MITRE)
-:muscle: - Powershell is Powerfull!!! 
+:muscle: Powershell is Powerfull!!! 
 
 ## Command & Control (C&C | C2 Beaconing)
 
@@ -86,12 +86,13 @@ OSINT - Yes!
     - HTTP/HTTPS, DNS
 
 **New Modern / Evolved chanenls**
+
     - HTTPS C2 - encrypted and looks normal. Most modern malware uses this.
     - DNS Tunneling - encoded data in DNS queries (slow but effective)
     - DNS over HTTPS (DoH) - it encrypts DNS!!! Crazy....
     - Cloud Service Abuse - C2 over legit platforms (GoogleDrive, Slack, Discord,     etc.)
-    - Web Sockets - persistent encryption connections that look like normal HTTPS
-    - ICMP tunneling - hiding data in ping packets
+    - Web Sockets - persistent encryption connections that look like normal 
+    - HTTPS- ICMP tunneling - hiding data in ping packets
     - Socail Media APIs - Twitter/X, Telegram used as C2 (fascinating)
 
 ### Question: "I know this is HTTP, BUT does this HTTP ***BEHAVE*** normally"
