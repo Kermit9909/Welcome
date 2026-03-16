@@ -132,4 +132,4 @@ N/A
 
 ## Takeaways
 
-Understanding the cyber kill chain gives an outline of the necessary requiremnts and techniques in order of a proper cyber attack.  Therefore, it gives a good baseline of where to look for IOCs to better catch alerts as early as possible.  It also relates to the pyramid of pain because if you can catch a suspicious hash it is much easier to stop a potential attack before it gets to a attackers TTPs.
+Understanding the cyber kill chain gives an outline of the necessary requiremnts, and the techniques of a proper cyber attack.  Therefore, it provides a good baseline of where to look for IOCs to better catch alerts as early as possible.  It also relates to the pyramid of pain. Catching a hash is easy for a SOC team,but just as easy for an attacker to evade.  The real goal is pushing detection up the kill chain and "bottle neck" the top of the pyramid. Because if an attacker has to change there TTPs it means they have to fundamentally change their whole plan of attack.  That gives defenders time to regroup and get ready.
