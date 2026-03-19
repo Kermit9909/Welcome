@@ -28,6 +28,11 @@ Go to > View > Coloring Rules
 *** Important Note ***
 They are in order of Priority > Keep bac TCP at the TOP of the list
 
+## Changing the Default Layout
+
+1. Edit > Preferences > Layout > Pane 3 = Packet Diagram
+2. Time to microseconds
+
 
 
 
