@@ -89,6 +89,6 @@
 
     - Principles of Security
     - Pentesting Fundamentals
-    - ~~Cyber Kill Chain~~
+    ~~- Cyber Kill Chain~~
     
 
