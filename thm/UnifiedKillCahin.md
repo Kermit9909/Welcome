@@ -85,5 +85,10 @@
 ## Objectives
     - If previous techniques successful the attackers would be able to perform their main objective (financial, info, political).
 
+## Further Rooms for Study:
 
+    - Principles of Security
+    - Pentesting Fundamentals
+    - ~~Cyber Kill Chain~~
+    
 
