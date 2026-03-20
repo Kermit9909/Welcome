@@ -14,7 +14,7 @@
 
 ## Introduction to the Unified Kill Chain
 
-![UKC](image.png)
+<img src="Welcome/thm/assets/ukc_pic.png">
 
 ## Benefits of the UKC Framework
 
