@@ -15,14 +15,14 @@
 ## 🧭 Who I Am
 
 I'm a self-taught IT and cybersecurity professional in the middle of a deliberate career
-transition. I hold CompTIA A+, Security+, and CCNA certifications, and I'm actively
-building toward SOC Tier 1, NOC Tier 1, and IT Helpdesk roles.
+transition. I hold CompTIA A+, Security+, and CCNA certifications, and I'm currently
+pursuing a career toward: SOC Tier 1, NOC Tier 1, and IT Helpdesk roles.
 
 This GitHub is two things at once: a **professional portfolio** and a **living notebook**.
 You'll find homelab projects, study notes, tool experiments, and the occasional deep dive
 into something that just caught my attention.
 
-Portfolio site: [seanelggren.com](https://seanelggren.com)
+## Portfolio site: [seanelggren.com](https://seanelggren.com)
 
 ---
 
@@ -33,7 +33,7 @@ Portfolio site: [seanelggren.com](https://seanelggren.com)
 | CompTIA A+ | CompTIA | ✅ Earned |
 | CompTIA Security+ | CompTIA | ✅ Earned |
 | Cisco CCNA | Cisco | ✅ Earned |
-| CompTIA CySA+ | CompTIA | 🔄 Next target |
+| TBD| TBD | 🔄 Next target |
 
 ---
 
@@ -66,23 +66,18 @@ Think of it as a public Obsidian vault.
 
 ## 🧰 Tech Stack & Tools
 
-**Operating Systems:** Kali Linux · Windows Server 2019 · Ubuntu Server · Windows 11  
+**Operating Systems:** Kali Linux · Windows Server 2019 · Ubuntu · Windows 11  
 **Networking:** pfSense · Cisco IOS · Wireshark · Packet Tracer  
 **Security:** Splunk · Metasploit · Wazuh · MITRE ATT&CK  
 **Scripting:** PowerShell · Python · Bash  
 **Sysadmin:** Active Directory · GPO · IIS · osTicket · Ansible  
-**Other:** Git · VirtualBox · Obsidian · Anki
+**Other:** Git · VirtualBox · VsCode
 
 ---
 
 ## 📖 Outside the Terminal
 
-I'm a practicing Catholic with a serious interest in theology, philosophy of science,
-mathematics, and physics. I find that the same habits that make someone good at
-learning technical skills — patience, curiosity, intellectual honesty — apply just as
-well to the rest of life.
-
-Martial arts philosophy also finds its way into how I think about problem-solving.
+When I am not studying, or learning new skills in the digital world, I enjoy spending my time outdoors. I enjoy traveling and exploring new places.  Some outdoor hobbies include: hiking, fishing, and snowshoeing.  I have yet to experience going to a comic-con, but that is a goal of mine. Any conversation about Marvel, DC, or anime definitly has my interest.  I also find the time to volunteer at my Church, and the Denver Rescue Mission.  
 
 ---
 
