@@ -54,6 +54,35 @@
     A: Done
 
 
+## Lab 3 - Display Filters
+
+Download the trace file that goes along with this assignment and use it to answer the associated questions. For most questions, you will need to set a filter and provide the number of packets that meet it.
+
+Questions for this assignment
+
+1. How many DNS packets are in the trace file?
+228
+
+2. How many DNS packets contain the word "Udemy"? (Regardless of case)
+20
+
+3. How many HTTP packets are in the pcap?
+66
+4. Set a filter for TCP port 80. How many packets meet that filter?
+211
+5. How many packets are in the top IP conversation? Set a filter for this conversation.
+406
+6. In the top IP conversation, how many packets have the word "Udemy", regardless of case?
+3
+7. How many packets have the SYN bit set?
+146
+8. How many TCP Resets are in the pcap?
+9
+9. How many TCP SYN/ACKs are in the pcap?
+73
+10. Are any SYN/ACKs coming from the 10.0.2.15 station? Y/N?
+No.
+
 
 
 
