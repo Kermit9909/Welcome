@@ -1,5 +1,5 @@
 
-# Practical IP Analysis with Fragmentation!
+# Practical IP Analysis | Fragmentation! | IPv6
 
 ### Source: Client-Side.pcapng File
 
@@ -48,6 +48,34 @@
 ## Alright, an NMAP Scan = Tiny Bytes
 
 ![nmap-scan](assets/nmap-scan.png)
+
+### Things to notate...
+    1. Packets 4-6
+        - fragmented SYN packet
+        - reassembled in packet 6 (Full Syn)
+
+![nmap-packet6](assets/nmapkt6.png) 
+
+        - notice the packet lengths (tiny tiny)
+        - 3 Dots on the left = Wireshark saying they are "reassembled" and the actual packet is packet 6 (TCP SYN)
+
+## IPv6 - It's kinda awesome...
+
+*** Just a little bit about IPv6 Protocol ***
+
+### Contrast from IPv4 
+    - IPv6 (0x866)
+    - 40 byte header
+        - Traffic Class (like diff serv tag)
+        - Flow Label (infrastructure devices can route more efficiently / Classify traffic)
+        - Hop Limit NOT TTL!
+        - NO IP ID!
+        - NO FRAGMENTATION / FLAGS
+
+![ipv6-example](assets/ipv6.png)
+
+
+
 
 
 
