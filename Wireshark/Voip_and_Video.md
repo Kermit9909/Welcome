@@ -26,10 +26,13 @@
 
    - Look at the Delta Time and notice 'jumps'
         EX. 0.19537 to 0.24050
+
     - Also, check the Differentiated Services Field
         EX. Diff Services Codepoint: Expedited Forwarding (yah/nay)
+
     - Could also check sequence number for variations
-    - **Check both directions (source/destination)
+
+    - **Check both directions (source/destination)**
 
 
 
