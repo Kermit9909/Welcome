@@ -1,0 +1,263 @@
+
+# Syslog - System Logging Protocol
+
+## Overview
+
+Syslog is a protocol used on Cisco devices (and other network equipment) to generate and send log messages to a centralized logging server. It's essential for network monitoring, troubleshooting, and security analysis.
+
+**Port:** UDP 514 (default)  
+**RFC:** 5424 (current), 3164 (legacy)
+
+---
+
+## Syslog Message Format
+
+```
+seq no:timestamp: %facility-severity-MNEMONIC:description
+```
+
+**Example:**
+
+```
+00:00:46: %LINK-3-UPDOWN: Interface Port-channel1, changed state to up
+```
+
+- **Timestamp:** When the event occurred
+- **Facility:** Which process generated the message (LINK, OSPF, SYS, etc.)
+- **Severity:** Numerical level 0-7
+- **Mnemonic:** Short code identifying the specific message type
+- **Description:** Details about the event
+
+---
+
+## Syslog Severity Levels
+
+### Mnemonic: "Every Awesome Cisco Engineer Will Need Ice Cream Daily"
+
+| Level | Keyword       | Mnemonic      | Description             | Example                 |
+| ----- | ------------- | ------------- | ----------------------- | ----------------------- |
+| **0** | Emergency     | **E**very     | System unusable         | System crash            |
+| **1** | Alert         | **A**wesome   | Immediate action needed | Temperature critical    |
+| **2** | Critical      | **C**isco     | Critical condition      | Hardware failure        |
+| **3** | Error         | **E**ngineer  | Error condition         | Interface down          |
+| **4** | Warning       | **W**ill      | Warning condition       | Config change           |
+| **5** | Notification  | **N**eed      | Normal but significant  | Line protocol up/down   |
+| **6** | Informational | **Ice Cream** | Informational only      | Interface status change |
+| **7** | Debugging     | **Daily       | Debug messages          | Packet details          |
+|       |               |               |                         |                         |
+
+### Key Points About Severity Levels:
+
+- **Lower number = Higher severity** (0 is most severe)
+- When you set a logging level, you get **that level AND all higher severity levels**
+- Example: `logging trap 4` (warnings) includes levels 0-4
+- **Level 7 (Debugging)** generates MASSIVE amounts of traffic - use carefully!
+
+---
+
+## Syslog Logging Locations
+
+Cisco devices can send logs to multiple destinations:
+
+### 1. Console Line
+
+- **Default:** Enabled at level 7 (debugging)
+- Messages appear on console connection
+- **Command:** `logging console [level]`
+- **Disable:** `no logging console`
+
+### 2. VTY Lines (Telnet/SSH)
+
+- **Default:** Disabled
+- **Command:** `logging monitor [level]`
+- **Enable display:** `terminal monitor` (per session)
+- Messages appear during remote sessions
+
+### 3. Buffer (RAM)
+
+- **Default:** Enabled at level 7
+- Stored in device memory (lost on reload)
+- **Command:** `logging buffered [size] [level]`
+- **View:** `show logging`
+
+### 4. External Syslog Server
+
+- **Default:** Disabled
+- Send logs to centralized server
+- **Command:** `logging host [ip-address]`
+- **Set level:** `logging trap [level]`
+
+---
+
+## Common Syslog Configuration
+
+### Basic Syslog Server Setup
+
+```cisco
+R1(config)# logging host 10.1.1.100
+R1(config)# logging trap informational
+R1(config)# logging source-interface g0/0
+```
+
+### Adjust Console Logging
+
+```cisco
+R1(config)# logging console warnings
+```
+
+_Now console only shows levels 0-4_
+
+### Configure Monitor Logging (SSH/Telnet)
+
+```cisco
+R1(config)# logging monitor notifications
+R1(config)# end
+R1# terminal monitor
+```
+
+_Enables logging display for current SSH/Telnet session_
+
+### Buffer Configuration
+
+```cisco
+R1(config)# logging buffered 8192 debugging
+```
+
+_8192 bytes buffer, stores all messages (0-7)_
+
+### Disable Logging Interruptions
+
+```cisco
+R1(config)# line console 0
+R1(config-line)# logging synchronous
+```
+
+_Prevents log messages from interrupting your typing_
+
+---
+
+## Verification Commands
+
+### View Logged Messages
+
+```cisco
+show logging
+```
+
+Shows:
+
+- Current logging configuration
+- Buffer contents
+- Syslog server settings
+- Message history
+
+### View Specific Facilities
+
+```cisco
+show logging | include OSPF
+show logging | include LINK
+```
+
+### Clear Log Buffer
+
+```cisco
+clear logging
+```
+
+---
+
+## Syslog Best Practices
+
+1. **Always configure a syslog server** for production networks
+2. **Use `logging synchronous`** on console/VTY lines for better UX
+3. **Set appropriate severity levels:**
+    - Console: Warning (4) or Error (3)
+    - Buffer: Informational (6) or Notifications (5)
+    - Syslog server: Informational (6) or Debugging (7)
+4. **Never leave debugging enabled** on production devices unless actively troubleshooting
+5. **Use NTP** to synchronize timestamps across all devices
+6. **Configure source interface** for consistent syslog source IP
+
+---
+
+## Debugging vs. Normal Logging
+
+### Standard Logging
+
+- Automatically generated by IOS
+- Reports significant events
+- Minimal performance impact
+
+### Debug Commands
+
+```cisco
+debug ip routing
+debug spanning-tree events
+```
+
+- **Must be manually enabled**
+- **Extremely verbose** - can overwhelm device CPU
+- **Always disable after troubleshooting:** `no debug all` or `undebug all`
+- **Check active debugs:** `show debugging`
+
+⚠️ **WARNING:** Debug output at level 7 can cause severe performance degradation!
+
+---
+
+## Common Syslog Facilities
+
+|Facility|Description|
+|---|---|
+|SYS|System-related messages|
+|LINK|Interface link status changes|
+|LINEPROTO|Line protocol status|
+|OSPF|OSPF routing protocol|
+|EIGRP|EIGRP routing protocol|
+|BGP|BGP routing protocol|
+|DUAL|EIGRP DUAL algorithm|
+|SSH|SSH connection events|
+
+---
+
+## Exam Tips
+
+1. **Know the severity levels in order** - use the mnemonic!
+2. **Remember level hierarchy** - lower number = more severe
+3. **Understand logging cascades** - setting level 4 includes 0-4
+4. **Know default states:**
+    - Console logging: ON (level 7)
+    - Monitor logging: OFF
+    - Buffer: ON (level 7)
+    - Syslog server: OFF
+5. **`terminal monitor`** is required to see logs on SSH/Telnet (even if `logging monitor` is configured)
+6. **Syslog uses UDP 514** (connectionless, no guarantee of delivery)
+
+---
+
+## Related CCNA Topics
+
+- [[NTP Configuration]] - Synchronized timestamps
+- [[SNMP]] - Another monitoring protocol
+- [[Network Management]] - Device monitoring strategies
+- [[SSH Configuration]] - Secure remote access for viewing logs
+
+---
+
+## Lab Practice Ideas
+
+1. Configure multiple logging destinations with different severity levels
+2. Generate log messages by shutting down interfaces
+3. Set up a syslog server and verify message reception
+4. Practice `terminal monitor` on SSH sessions
+5. Test debugging commands and observe CPU impact
+6. Configure `logging synchronous` and compare experience
+
+---
+
+**Study Resources:**
+
+- Jeremy's IT Lab: Day 44 - Syslog
+- Cisco IOS Logging Configuration Guide
+- RFC 5424 - Syslog Protocol
+
+**Last Updated:** 2024
