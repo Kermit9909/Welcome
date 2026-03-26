@@ -5,8 +5,6 @@
 
 # Kermit9909
 
-![Kermit](./kermit.png)
-
 ---
 
 ## 🧭 Who I Am
