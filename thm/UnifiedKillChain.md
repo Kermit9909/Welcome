@@ -10,11 +10,11 @@
 ### KillChain Frameworks:
     - STRIDE
     - DREAD
-    - CVSS
+    - CVSSs
 
 ## Introduction to the Unified Kill Chain
 
-<img src="Welcome/thm/assets/ukc_pic.png">
+![ukc](assets/ukc_pic.png)
 
 ## Benefits of the UKC Framework
 
