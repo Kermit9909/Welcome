@@ -32,14 +32,14 @@ into something that just caught my attention.
 
 ---
 
-## 🏗️ Active Projects & Portfolio
+## 🏗️ Active Projects 
 
 | Project | Description 
 |---------|-------------|
-| [Homelab Infrastucture] | Windows Server 2019 DC, pfSense, Kali, Ubuntu on VirtualBox | 
-| [osTicket Help Desk Lab] | Full WIMP stack deployment with live ticket workflow demos | 
-| [SOC Alert Triage Lab] | Splunk SPL practice, phishing analysis, MITRE ATT&CK mapping | 
-| [Network Lab] | Packet Tracer CCNA demos, Wireshark troubleshooting, Ansible | 
+| Homelab Infrastucture | Windows Server 2019 DC, pfSense, Kali, Ubuntu on VirtualBox | 
+| osTicket Help Desk Lab | Full WIMP stack deployment with live ticket workflow demos | 
+| SOC Alert Triage Lab | Splunk SPL practice, phishing analysis, MITRE ATT&CK mapping | 
+| Network Lab | Packet Tracer CCNA demos, Wireshark troubleshooting, Ansible | 
 
 ---
 
@@ -67,7 +67,7 @@ This was a project I started 1.5 years ago.  I don't currently work on it.  I'm 
 
 ## 📖 Outside the Terminal
 
-When I am not studying, or learning new skills in the digital world, I enjoy spending my time outdoors. I enjoy traveling and exploring new places.  Some outdoor hobbies include: hiking, fishing, and snowshoeing.  I have yet to experience going to a comic-con, but that is a goal of mine. Any conversation about Marvel, DC, or anime definitly has my interest.  I also find the time to volunteer at my Church, and the Denver Rescue Mission.  
+When I am not studying, or learning new skills in the digital world, I enjoy spending my time outdoors. I enjoy traveling and exploring new places.  Some outdoor hobbies include: hiking, fishing, and snowshoeing.  I have yet to experience going to a comic-con, but that is a goal of mine. Any conversation about Marvel, DC, or anime definitly has my interest.  I also find the time to volunteer the Denver Rescue Mission.  
 
 ---
 
