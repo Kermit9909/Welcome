@@ -3,22 +3,17 @@
 ![Kermit the Frog with a black hoodie in ASCII art](https://github.com/user-attachments/assets/5e90b07c-26d2-48b7-a71f-a4a7f678092a)
 
 
-# Hey, I'm Sean (aka Kermit9909) 👋
-
-![Kermit](./kermit.png)
-
-> *"The journey of a thousand miles begins with a single step."*  
-> Currently on mile 47 — and documenting every one of them.
+# Kermit9909
 
 ---
 
 ## 🧭 Who I Am
 
-I'm a self-taught IT and cybersecurity professional in the middle of a deliberate career
+I'm a self-taught IT and cybersecurity student in the middle of a deliberate career
 transition. I hold CompTIA A+, Security+, and CCNA certifications, and I'm currently
 pursuing a career toward: SOC Tier 1, NOC Tier 1, and IT Helpdesk roles.
 
-This GitHub is two things at once: a **professional portfolio** and a **living notebook**.
+This GitHub is two things: a **portfolio of sorts** and a **living notebook**.
 You'll find homelab projects, study notes, tool experiments, and the occasional deep dive
 into something that just caught my attention.
 
@@ -37,18 +32,18 @@ into something that just caught my attention.
 
 ---
 
-## 🏗️ Active Projects & Portfolio
+## 🏗️ Active Projects 
 
-| Project | Description | Track |
-|---------|-------------|-------|
-| [Homelab Infrastructure](./homelab/) | Windows Server 2019 DC, pfSense, Kali, Ubuntu on VirtualBox | Sysadmin / SOC |
-| [osTicket Help Desk Lab](./osticket/) | Full WIMP stack deployment with live ticket workflow demos | IT Helpdesk |
-| [SOC Alert Triage Lab](./soc/) | Splunk SPL practice, phishing analysis, MITRE ATT&CK mapping | SOC Analyst |
-| [Network Lab](./networking/) | Packet Tracer CCNA demos, Wireshark troubleshooting, Ansible | NOC / Networking |
+| Project | Description 
+|---------|-------------|
+| Homelab Infrastucture | Windows Server 2019 DC, pfSense, Kali, Ubuntu on VirtualBox | 
+| osTicket Help Desk Lab | Full WIMP stack deployment with live ticket workflow demos | 
+| SOC Alert Triage Lab | Splunk SPL practice, phishing analysis, MITRE ATT&CK mapping | 
+| Network Lab | Packet Tracer CCNA demos, Wireshark troubleshooting, Ansible | 
 
 ---
 
-## 📚 Learning Journal
+## 📚 Welcome Folder
 
 This is where I keep running notes, references, and experiments.
 Think of it as a public Obsidian vault.
@@ -64,29 +59,22 @@ Think of it as a public Obsidian vault.
 
 ---
 
-## 🧰 Tech Stack & Tools
+## 🧰 My Github.io
 
-**Operating Systems:** Kali Linux · Windows Server 2019 · Ubuntu · Windows 11  
-**Networking:** pfSense · Cisco IOS · Wireshark · Packet Tracer  
-**Security:** Splunk · Metasploit · Wazuh · MITRE ATT&CK  
-**Scripting:** PowerShell · Python · Bash  
-**Sysadmin:** Active Directory · GPO · IIS · osTicket · Ansible  
-**Other:** Git · VirtualBox · VsCode
+This was a project I started 1.5 years ago.  I don't currently work on it.  I'm keeping it just because it brings back memories.  I was really interested in how websites work, and I wanted to build one (for free).  That is actually how I got on github.  I just wanted to learn some basic html, css, etc.  I had no idea it would be so much trouble shooting with ruby, and jekyll :)  Fun, fun...I learned a lot.
 
 ---
 
 ## 📖 Outside the Terminal
 
-When I am not studying, or learning new skills in the digital world, I enjoy spending my time outdoors. I enjoy traveling and exploring new places.  Some outdoor hobbies include: hiking, fishing, and snowshoeing.  I have yet to experience going to a comic-con, but that is a goal of mine. Any conversation about Marvel, DC, or anime definitly has my interest.  I also find the time to volunteer at my Church, and the Denver Rescue Mission.  
+When I am not studying, or learning new skills in the digital world, I enjoy spending my time outdoors. I enjoy traveling and exploring new places.  Some outdoor hobbies include: hiking, fishing, and snowshoeing.  I have yet to experience going to a comic-con, but that is a goal of mine. Any conversation about Marvel, DC, or anime definitly has my interest.  I also find the time to volunteer the Denver Rescue Mission.  
 
 ---
 
 ## 📬 Connect
 
 - 🌐 [seanelggren.com](https://seanelggren.com)
-- 💼 [LinkedIn](#) *(add your link)*
-- 📧 *(optional — your call)*
-
+- 💼 [LinkedIn](https://www.linkedin.com/in/sean-elggren-3477271a5/) 
 ---
 
 *This repo is always a work in progress. That's the point.*
