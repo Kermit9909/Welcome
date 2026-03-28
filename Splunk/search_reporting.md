@@ -44,19 +44,19 @@ More available fields: If more fields are available, they can be accessed and se
 
 ## Dedup
 
-The dedup (opens in new tab) command removes duplicate values from your search results. For example, if our logs contain seven distinct IP addresses in the SourceIp field, the results will return seven events, one for each unique IP. The command is useful for subsearches and for cleaning identical events (e.g., Microsoft 365 often sends 50 events for a single activity).
+The dedup command removes duplicate values from your search results. For example, if our logs contain seven distinct IP addresses in the SourceIp field, the results will return seven events, one for each unique IP. The command is useful for subsearches and for cleaning identical events (e.g., Microsoft 365 often sends 50 events for a single activity).
 
 ## Rename
 
-The rename (opens in new tab) command allows you to change the name of a field in your search results. This can help improve the readability of your search results, especially if the original fields are too long or not suitable for showing them in the screenshots in formal SOC reports.
+The rename command allows you to change the name of a field in your search results. This can help improve the readability of your search results, especially if the original fields are too long or not suitable for showing them in the screenshots in formal SOC reports.
 
 ## Regex
 
-The regex (opens in new tab) command allows you to filter search results using regular expressions, which match specific text patterns in field values. This is useful when you need to find events that follow a specific format rather than an exact keyword. Splunk regular expressions are PCRE (Perl Compatible Regular Expressions) and use the PCRE C library.
+The regex command allows you to filter search results using regular expressions, which match specific text patterns in field values. This is useful when you need to find events that follow a specific format rather than an exact keyword. Splunk regular expressions are PCRE (Perl Compatible Regular Expressions) and use the PCRE C library.
 
 ## Table Command
 
-The table (opens in new tab) command allows you to select only the fields you are interested in viewing and displays them in a clean, readable format. This is especially useful when building timelines, investigating specific hosts or users, or comparing multiple fields. This query will create a table out of named fields and organize them by timestamp. Use the table command to answer the first question.
+The table command allows you to select only the fields you are interested in viewing and displays them in a clean, readable format. This is especially useful when building timelines, investigating specific hosts or users, or comparing multiple fields. This query will create a table out of named fields and organize them by timestamp. Use the table command to answer the first question.
 
 ## Useful Structuring Commands
 
@@ -98,7 +98,7 @@ The chart (opens in new tab) command returns your search results in a table, whi
 
 ## Timechart
 
-The timechart (opens in new tab) command is used to visualize how data changes over time. It is beneficial for spotting trends, peaks, and anomalies in your log data. In the example below, we use timechart to track process activity over time. The following query removes any NULL Image field values and creates a time-based area chart showing the top five most frequently occurring process images within 30-minute intervals.
+The timechart command is used to visualize how data changes over time. It is beneficial for spotting trends, peaks, and anomalies in your log data. In the example below, we use timechart to track process activity over time. The following query removes any NULL Image field values and creates a time-based area chart showing the top five most frequently occurring process images within 30-minute intervals.
 
 ```
 index=windowslogs Image!="" | timechart span=30m count by Image limit=5
@@ -106,7 +106,7 @@ index=windowslogs Image!="" | timechart span=30m count by Image limit=5
 ```
 ## IP Location
 
-You can use the iplocation (opens in new tab) command to enrich your search results with geographic information about IP addresses. It uses Splunk's built-in geolocation tables to add fields such as City, Region, and Country. Try it out with the query below.
+You can use the iplocation command to enrich your search results with geographic information about IP addresses. It uses Splunk's built-in geolocation tables to add fields such as City, Region, and Country. Try it out with the query below.
 
 ```
 index=windowslogs | iplocation SourceIp | stats count by Country
@@ -114,7 +114,7 @@ index=windowslogs | iplocation SourceIp | stats count by Country
 
 ## Lookup
 
-Similarly, lookup (opens in new tab) is used to enrich events using external data sources. It matches a field in your search to a corresponding field in a CSV file or lookup table. In this example, a CSV was created that associates the Hostname field with an employee role signified by UserRole.
+Similarly, lookup is used to enrich events using external data sources. It matches a field in your search to a corresponding field in a CSV file or lookup table. In this example, a CSV was created that associates the Hostname field with an employee role signified by UserRole.
 
 ```
 index=windowslogs
@@ -125,7 +125,7 @@ index=windowslogs
 
 ## Eval
 
-The eval (opens in new tab) command is one of the most versatile tools in Splunk. It allows you to create new fields, modify existing ones, and perform calculations directly within your searches. It can be used to make data more readable and prepare fields for use in visualizations. In the example below, we created a new field called LogonTypeDesc to give a more descriptive name to numeric LogonType values.
+The eval command is one of the most versatile tools in Splunk. It allows you to create new fields, modify existing ones, and perform calculations directly within your searches. It can be used to make data more readable and prepare fields for use in visualizations. In the example below, we created a new field called LogonTypeDesc to give a more descriptive name to numeric LogonType values.
 
 ```
 index=windowslogs
