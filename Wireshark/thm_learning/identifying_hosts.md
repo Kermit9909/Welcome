@@ -102,3 +102,26 @@ kerberos.SNameString == "krbtg"
 
 ---
 
+## Q && A:
+
+**What is the MAC address of the host "Galaxy A30"**
+9a:81:41:cb:96:6c
+***dhcp.options.hostname contains "Galaxy"***
+
+**How many NetBIOS registration requests does the "LIVALJM" workstation have?**
+16
+***nbns.name contains "LIVALJM" && nbns.flags.opcode==5
+
+**Which host requested the IP address "172.16.13.85"?**
+Galaxy-A12
+***dhcp.option.dhcp==3***
+
+**What is the IP address of the user "u5"? (Enter the address in defanged format.)**
+10[.]1[.]12[.]2
+***kerberos.CNameString and !(kerberos.CNameString contains "$")***
+
+**What is the hostname of the available host in the Kerberos packets?**
+xp1$
+***kerberos.CNameString and (kerberos.CNameString contains "$")***
+
+
