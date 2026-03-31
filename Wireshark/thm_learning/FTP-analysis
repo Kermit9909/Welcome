@@ -1,0 +1,199 @@
+# Cleartext Protocol Analysis - Quick Summary
+
+## The Challenge
+Analyzing cleartext protocols isn't just about reading the data - you need to create **statistics, detect patterns, and identify threats** in large network traces. This requires both network knowledge and Wireshark expertise.
+
+---
+
+## FTP (File Transfer Protocol) Analysis
+
+### Why FTP is Dangerous
+**FTP = cleartext = insecure**
+
+Common attacks:
+- 🚨 **MITM attacks** - Intercept credentials and data
+- 🚨 **Credential theft** - Usernames/passwords sent in plain text
+- 🚨 **Phishing** - Fake FTP servers
+- 🚨 **Malware distribution** - Upload malicious files
+- 🚨 **Data exfiltration** - Steal sensitive files
+
+---
+
+## FTP Response Codes (Know These!)
+
+### x1x Series - Information Responses
+| Code | Meaning | Filter |
+|------|---------|--------|
+| 211 | System status | `ftp.response.code == 211` |
+| 212 | Directory status | `ftp.response.code == 212` |
+| 213 | File status | `ftp.response.code == 213` |
+
+### x2x Series - Connection Messages
+| Code | Meaning | Filter |
+|------|---------|--------|
+| 200 | Command successful | `ftp.response.code == 200` |
+| 220 | Service ready | `ftp.response.code == 220` |
+| 227 | Entering passive mode | `ftp.response.code == 227` |
+| 228 | Long passive mode | `ftp.response.code == 228` |
+| 229 | Extended passive mode | `ftp.response.code == 229` |
+
+### x3x Series - Authentication Messages (CRITICAL!)
+| Code | Meaning | Filter |
+|------|---------|--------|
+| 230 | User login successful ✅ | `ftp.response.code == 230` |
+| 231 | User logout | `ftp.response.code == 231` |
+| 331 | Valid username, need password | `ftp.response.code == 331` |
+| 430 | Invalid username or password ❌ | `ftp.response.code == 430` |
+| 530 | No login, invalid password ❌ | `ftp.response.code == 530` |
+
+---
+
+## Key FTP Commands
+
+| Command | Purpose | Filter |
+|---------|---------|--------|
+| **USER** | Username | `ftp.request.command == "USER"` |
+| **PASS** | Password | `ftp.request.command == "PASS"` |
+| **CWD** | Change directory | `ftp.request.command == "CWD"` |
+| **LIST** | List files | `ftp.request.command == "LIST"` |
+| **RETR** | Download file | `ftp.request.command == "RETR"` |
+| **STOR** | Upload file | `ftp.request.command == "STOR"` |
+
+---
+
+## Attack Detection Patterns
+
+### 1. **Brute Force Attack Detection**
+```bash
+# Find failed login attempts
+ftp.response.code == 530
+
+# Count failed attempts for specific username
+(ftp.response.code == 530) and (ftp.response.arg contains "admin")
+
+# Statistics → Conversations to see high attempt volume
+```
+
+### 2. **Password Spray Detection**
+```bash
+# Same password tried against multiple usernames
+(ftp.request.command == "PASS") and (ftp.request.arg == "password123")
+
+# Then check how many different USER commands precede it
+```
+
+### 3. **Credential Harvesting**
+```bash
+# Extract all usernames
+ftp.request.command == "USER"
+
+# Extract all passwords (yes, they're plaintext!)
+ftp.request.command == "PASS"
+
+# Get specific password
+ftp.request.arg == "password"
+```
+
+### 4. **Data Exfiltration**
+```bash
+# Large file downloads
+ftp.request.command == "RETR"
+
+# Check file sizes in Follow TCP Stream
+```
+
+---
+
+## Essential Wireshark Filters
+
+```bash
+# Basic FTP traffic
+ftp
+
+# Successful logins
+ftp.response.code == 230
+
+# Failed logins
+ftp.response.code == 530
+
+# Username attempts
+ftp.request.command == "USER"
+
+# Password attempts
+ftp.request.command == "PASS"
+
+# File transfers
+ftp.request.command == "RETR" or ftp.request.command == "STOR"
+
+# Brute force detection (multiple failures)
+ftp.response.code == 530
+# Then: Statistics → Conversations
+```
+
+---
+
+## Quick Analysis Workflow
+
+**Step 1: Get the overview**
+```
+Statistics → Protocol Hierarchy
+Statistics → Conversations (sort by packets)
+```
+
+**Step 2: Find authentication activity**
+```
+ftp.request.command == "USER"
+ftp.response.code == 530  (failed logins)
+ftp.response.code == 230  (successful logins)
+```
+
+**Step 3: Extract credentials**
+```
+ftp.request.command == "PASS"
+# Follow TCP Stream to see username + password together
+```
+
+**Step 4: Check for suspicious patterns**
+- Multiple 530 codes = brute force
+- Same password, many users = password spray
+- Large RETR commands = possible data theft
+
+---
+
+## Red Flags to Look For
+
+🚩 **High volume of code 530** - Brute force attempt  
+🚩 **Multiple USER commands with same PASS** - Password spray  
+🚩 **Login outside business hours** - Unauthorized access  
+🚩 **Large file transfers** - Data exfiltration  
+🚩 **STOR commands** - Malware upload  
+🚩 **Unusual directory access (CWD)** - Reconnaissance  
+
+---
+
+## Key Takeaways
+
+✅ **FTP = PLAINTEXT** - Everything is visible (credentials, files, commands)  
+✅ **Response codes tell the story** - 230 = success, 530 = failure  
+✅ **Statistics are your friend** - Brute force shows up in conversation counts  
+✅ **Follow TCP Stream** - See entire FTP session (commands + responses)  
+✅ **Never use FTP for sensitive data** - Use SFTP or FTPS instead  
+
+---
+
+## **Common questions to ask?:**
+1. How many failed login attempts?
+2. What username was targeted?
+3. What password was successful?
+4. What files were transferred?
+5. What was the attacker's IP?
+
+## **Approach:**
+```
+1. ftp.response.code == 530  (count failures)
+2. ftp.request.command == "USER"  (find usernames)
+3. ftp.response.code == 230  (find success)
+4. Follow TCP Stream to see full session
+5. ftp.request.command == "RETR"  (see files downloaded)
+```
+
