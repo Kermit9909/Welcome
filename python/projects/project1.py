@@ -13,7 +13,7 @@
 # pet = input("What's your pet's name?\n")
 
 # Greeting for user
-print("Welcome to the Band Name Generator\n")
+print("Welcome to the Band Name Generator\n")#G
 
 # Ask the city
 city = input("What's the name of city you grew up in?\n")
