@@ -14,3 +14,9 @@
     - Zeek Exercises
     - Brim
 
+## Phishing Rooms
+    - Phishing Emails in Action
+    - Phishing Analysis Tools
+    - Phishing Prevention
+    - The Greenholt Phish
+    - Snapped Phish-ing LIne
