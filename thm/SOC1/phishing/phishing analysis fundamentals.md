@@ -35,6 +35,7 @@ An Email's Journey
     - base64 to pdf (apivoid.com)
     - Cyberchef (save as pdf if needed)
         - can defang (cool)
+    - wheregoes.com (URL checker)
 
 ### Important Info:
 
