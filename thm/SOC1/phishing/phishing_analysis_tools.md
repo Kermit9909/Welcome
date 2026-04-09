@@ -10,6 +10,7 @@
     - Cisco Talos (IP, Domain, hash values)
     - Cyberchef  (decode, url extraction, defang, and more)
     - VirusTotal
+    - DMARC Domain Checker (dmarcian.com/domain-checker)
 
 
 ### First goal in an investigation is collecting the key artifacts of the email
