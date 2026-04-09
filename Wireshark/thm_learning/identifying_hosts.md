@@ -124,4 +124,3 @@ Galaxy-A12
 xp1$
 ***kerberos.CNameString and (kerberos.CNameString contains "$")***
 
-
