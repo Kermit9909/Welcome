@@ -59,12 +59,6 @@ Think of it as a public Obsidian vault.
 
 ---
 
-## 🧰 My Github.io
-
-This was a project I started 1.5 years ago.  I don't currently work on it.  I'm keeping it just because it brings back memories.  I was really interested in how websites work, and I wanted to build one (for free).  That is actually how I got on github.  I just wanted to learn some basic html, css, etc.  I had no idea it would be so much trouble shooting with ruby, and jekyll :)  Fun, fun...I learned a lot.
-
----
-
 ## 📖 Outside the Terminal
 
 When I am not studying, or learning new skills in the digital world, I enjoy spending my time outdoors. I enjoy traveling and exploring new places.  Some outdoor hobbies include: hiking, fishing, and snowshoeing.  I have yet to experience going to a comic-con, but that is a goal of mine. Any conversation about Marvel, DC, or anime definitly has my interest.  I also find the time to volunteer the Denver Rescue Mission.  
@@ -74,7 +68,7 @@ When I am not studying, or learning new skills in the digital world, I enjoy spe
 ## 📬 Connect
 
 - 🌐 [seanelggren.com](https://seanelggren.com)
-- 💼 [LinkedIn](https://www.linkedin.com/in/sean-elggren-3477271a5/) 
+- 💼 [LinkedIn](https://www.linkedin.com/in/sean-elggren/) 
 ---
 
 *This repo is always a work in progress. That's the point.*
