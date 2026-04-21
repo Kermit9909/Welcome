@@ -12,7 +12,7 @@
 # print("Hello " + input("What is your name?") + "!")
 
 # variable = place holder for a value ( james = 012345)
-#name = "Jack"
+# name = "Jack"
 #print(name)
 
 # Step 1 = create the input
@@ -24,5 +24,4 @@
 # username = input("What is your name?")
 # lenth = len(username)
 # print(lenth)
-
 
